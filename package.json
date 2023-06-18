@@ -1,78 +1,80 @@
 {
-  "name": "react-scaffold",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.36",
-    "@types/react": "^18.2.12",
-    "@types/react-dom": "^18.2.5",
-    "gh-pages": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "prepare": "husky install",
-    "start": "react-scripts --openssl-legacy-provider start",
-    "test": "react-scripts test",
-    "test:ci": "npm test -- --coverage --watchAll=false",
-    "build": "react-scripts --openssl-legacy-provider build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject",
-    "lint": "eslint --fix \"src/**/*.{ts, tsx}\" & npx prettier --write src"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "eslint": "^8.43.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8"
-  },
-  "prettier": {
-      "trailingComma": "es5",
-      "tabWidth": 4,
-      "semi": true,
-      "singleQuote": true,
-      "importOrder": [
-          "^react$",
-          "<THIRD_PARTY_MODULES>",
-          "^(?!\\.).*",
-          "^\\.\\.",
-          "(.+)(?<!\\.css|\\.svg)",
-          "^.*$"
-      ],
-      "importOrderSeparation": true
-  }
+    "name": "react-scaffold",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.36",
+        "@types/react": "^18.2.12",
+        "@types/react-dom": "^18.2.5",
+        "firebase": "^9.22.2",
+        "gh-pages": "^5.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-firebase-hooks": "^5.1.1",
+        "react-scripts": "5.0.1",
+        "typescript": "^4.9.5",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "start": "react-scripts start",
+        "test": "react-scripts test",
+        "test:ci": "npm test -- --coverage --watchAll=false",
+        "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "eject": "react-scripts eject",
+        "lint": "eslint --fix \"src/**/*.{ts, tsx, js}\" & npx prettier --write src"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+        "eslint": "^8.43.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-import-resolver-typescript": "^3.5.5",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.8"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "importOrder": [
+            "^react$",
+            "<THIRD_PARTY_MODULES>",
+            "^(?!\\.).*",
+            "^\\.\\.",
+            "(.+)(?<!\\.css|\\.svg)",
+            "^.*$"
+        ],
+        "importOrderSeparation": true
+    }
 }
