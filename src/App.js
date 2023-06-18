@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 
 // import {  } from "firebase/auth";
-import { getAnalytics } from 'firebase/analytics';
-import { initializeApp } from 'firebase/app';
+// import { getAnalytics } from 'firebase/analytics';
+// import { initializeApp } from 'firebase/app';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -63,7 +63,7 @@ function ChatRoom() {
     const dummy = useRef();
     const sendMessage = async (e) => {
         e.preventDefault();
-        const { uid, photoURL } = auth.currentUser;
+        // const { uid, photoURL } = auth.currentUser;
         await messagesRef.add({
             text: formValue,
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
@@ -103,7 +103,7 @@ function ChatMessage(props) {
     // const messageClass = uid === auth.currentUser.uid ?
     return (
         <div className={`message ${messageClass}`}>
-            <img src={photoURL} />
+            <img alt="" src={photoURL} />
             <p>{text}</p>
         </div>
     );
